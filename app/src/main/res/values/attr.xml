@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    
+
     <declare-styleable name="SingleTouchView">
         <attr name="src" format="reference" />            <!-- 用于缩放旋转的图标 -->
         <attr name="editable" format="boolean"/>          <!-- 是否处于可编辑状态 -->

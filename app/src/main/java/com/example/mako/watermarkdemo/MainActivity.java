@@ -43,7 +43,7 @@ public class MainActivity extends ActionBarActivity {
 
                 iv.setEditable(false);
 
-                Bitmap bitmap1=loadBitmapFromView(ll,800,800);
+                Bitmap bitmap1=loadBitmapFromView(ll,ll.getWidth(),ll.getHeight());
 
                 Log.i("MainActivity", "bitmap1" + bitmap1);
 
