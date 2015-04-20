@@ -53,17 +53,14 @@ public class MainActivity extends ActionBarActivity {
                     iv.setEditable(true);
                 }
 
-
             }
         });
 
         Bitmap bitmap= BitmapFactory.decodeResource(getResources(), R.drawable.ic_watermark2);
 
-        WatermarkDrawable drawable=new WatermarkDrawable(this,"云雾山没有山",12,bitmap,80,80);
+        WatermarkDrawable drawable=new WatermarkDrawable(this,"云雾山没有山",44,bitmap,300,300);
 
         iv.setImageDrawable(drawable);
-
-
 
     }
 

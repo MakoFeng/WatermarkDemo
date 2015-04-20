@@ -12,22 +12,22 @@
         android:background="@drawable/ic_bg"
         android:layout_height="300dp">
 
-<!--        <com.example.mako.watermarkdemo.WatermarkView
-            android:id="@+id/wv"
-            android:layout_width="80dp"
-            android:rotation="-30"
-            android:layout_height="80dp" />-->
+        <!--        <com.example.mako.watermarkdemo.WatermarkView
+                    android:id="@+id/wv"
+                    android:layout_width="80dp"
+                    android:rotation="-30"
+                    android:layout_height="80dp" />-->
 
+            <com.example.mako.watermarkdemo.SingleTouchView
+                android:id="@+id/iv"
+                app:scale="0.3"
+                app:frameColor="#FFFFFF"
+                app:frameWidth="1sp"
+                app:editable="true"
+                app:controlLocation="right_top"
+                android:layout_width="80dp"
+                android:layout_height="80dp" />
 
-        <com.example.mako.watermarkdemo.SingleTouchView
-            android:id="@+id/iv"
-            app:scale="1.2"
-            app:frameColor="#FFFFFF"
-            app:frameWidth="1sp"
-            app:editable="true"
-            app:controlLocation="right_top"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
 
     </LinearLayout>
 

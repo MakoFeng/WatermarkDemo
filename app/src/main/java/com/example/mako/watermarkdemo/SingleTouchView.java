@@ -250,6 +250,7 @@ public class SingleTouchView extends View {
     private void init(){
         mPaint = new Paint();
         mPaint.setAntiAlias(true);
+        mPaint.setFlags(Paint.ANTI_ALIAS_FLAG);
         mPaint.setColor(frameColor);
         mPaint.setStrokeWidth(frameWidth);
         mPaint.setStyle(Style.STROKE);
@@ -369,7 +370,12 @@ public class SingleTouchView extends View {
         super.onDraw(canvas);
 
         if(mBitmap == null) return;
-        canvas.drawBitmap(mBitmap, matrix, null);
+
+        Paint p=new Paint();
+        p.setAntiAlias(true);
+        p.setFlags(Paint.ANTI_ALIAS_FLAG);
+
+        canvas.drawBitmap(mBitmap, matrix, p);
 
         //处于可编辑状态才画边框和控制图标
         if(isEditable){
