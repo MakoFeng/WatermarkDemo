@@ -422,13 +422,17 @@ public class SingleTouchView extends View {
     }
 
 
-    public boolean onTouchEvent(MotionEvent event) {
+    public boolean dispatchTouchEvent(MotionEvent event) {
         if(!isEditable){
             return super.onTouchEvent(event);
         }
         switch (event.getAction() ) {
             case MotionEvent.ACTION_DOWN:
                 mPreMovePointF.set(event.getX() + mViewPaddingLeft, event.getY() + mViewPaddingTop);
+
+                if (getParent() != null) {
+                    getParent().requestDisallowInterceptTouchEvent(true);
+                }
 
                 mStatus = JudgeStatus(event.getX(), event.getY());
 

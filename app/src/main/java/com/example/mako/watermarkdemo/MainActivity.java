@@ -45,6 +45,8 @@ public class MainActivity extends ActionBarActivity {
 
                 Bitmap bitmap1=loadBitmapFromView(ll,ll.getWidth(),ll.getHeight());
 
+
+
                 Log.i("MainActivity", "bitmap1" + bitmap1);
 
                 if (bitmap1!=null){

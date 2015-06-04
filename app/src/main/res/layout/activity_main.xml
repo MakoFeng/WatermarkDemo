@@ -1,47 +1,47 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:orientation="vertical"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <LinearLayout
-        android:id="@+id/ll"
-        android:gravity="bottom|right"
-        android:layout_width="300dp"
-        android:orientation="vertical"
-        android:background="@drawable/ic_bg"
-        android:layout_height="300dp">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-        <!--        <com.example.mako.watermarkdemo.WatermarkView
-                    android:id="@+id/wv"
-                    android:layout_width="80dp"
-                    android:rotation="-30"
-                    android:layout_height="80dp" />-->
+        <LinearLayout
+            android:id="@+id/ll"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:background="@drawable/ic_bg"
+            android:gravity="bottom|right"
+            android:orientation="vertical">
 
             <com.example.mako.watermarkdemo.SingleTouchView
                 android:id="@+id/iv"
-                app:scale="0.3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:controlLocation="right_top"
+                app:editable="true"
                 app:frameColor="#FFFFFF"
                 app:frameWidth="1sp"
-                app:editable="true"
-                app:controlLocation="right_top"
-                android:layout_width="80dp"
-                android:layout_height="80dp" />
+                app:scale="0.3" />
+
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="生成图片" />
+
+        <ImageView
+            android:id="@+id/showimg"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:scaleType="centerCrop" />
 
 
     </LinearLayout>
-
-    <Button
-        android:id="@+id/btn"
-        android:text="生成图片"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-
-    <ImageView
-        android:id="@+id/showimg"
-        android:layout_width="200dp"
-        android:scaleType="centerCrop"
-        android:layout_height="200dp" />
-
-
-</LinearLayout>
+</ScrollView>
